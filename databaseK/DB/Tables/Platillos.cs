@@ -8,8 +8,14 @@ using databaseK.Entities;
 
 namespace databaseK.DB.Tables
 {
-    class Platillos : Basic<PlatillosEntity>
+    public class Platillos : Basic<PlatillosEntity>
     {
         public Platillos(MyContext context) : base(context) { }
+
+        public IEnumerable<PlatillosEntity> platillos_familia(long f_id)
+        {
+            var platillos = where((e) => e.familia == f_id);
+            return platillos.ToList();
+        }
     }
 }

@@ -9,12 +9,12 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace databaseK.Entities
 {
     [Table("familias_p")]
-    class FamiliasPEntity
+    public class FamiliasPEntity
     {
         [Key]
         public long id { get; set; }
         public string nombre { get; set; }
 
-        public ICollection<PlatillosEntity> platillos { get; set; }
+        public virtual ICollection<PlatillosEntity> platillos { get; set; }
     }
 }

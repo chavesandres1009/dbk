@@ -9,10 +9,10 @@ using System.Data.Entity;
 
 namespace databaseK.DB
 {
-    class Basic<TEntity> where TEntity : class
+    public class Basic<TEntity> where TEntity : class
     {
 
-        private DbSet<TEntity> context;
+        protected DbSet<TEntity> context;
 
         public Basic(MyContext context)
         {

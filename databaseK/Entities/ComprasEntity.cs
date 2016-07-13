@@ -9,7 +9,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace databaseK.Entities
 {
     [Table("compras")]
-    class ComprasEntity
+    public class ComprasEntity
     {
         [Key]
         public long id { get; set; }
@@ -24,9 +24,11 @@ namespace databaseK.Entities
         public float impuesto_s { get; set; }
         public float descuento { get; set; }
 
+        [ForeignKey("cliente")]
         public ClientesEntity cliente_E { get; set; }
+        [ForeignKey("mesero")]
         public EmpleadosEntity empleado_E { get; set; }
 
-        public ICollection<CompraPlatilloEntity> platillos { get; set; }
+        public virtual ICollection<CompraPlatilloEntity> platillos { get; set; }
     }
 }

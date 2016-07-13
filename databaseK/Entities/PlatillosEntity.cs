@@ -9,7 +9,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace databaseK.Entities
 {
     [Table("platillos")]
-    class PlatillosEntity
+    public class PlatillosEntity
     {
         [Key]
         public long id { get; set; }
@@ -20,7 +20,8 @@ namespace databaseK.Entities
         public float precio { get; set; }
         public bool acompanamiento { get; set; }
 
+        [ForeignKey("familia")]
         public FamiliasPEntity familia_E { get; set; }
-        public ICollection<CompraPlatilloEntity> compras_platillo { get; set; }
+        public virtual ICollection<CompraPlatilloEntity> compras_platillo { get; set; }
     }
 }

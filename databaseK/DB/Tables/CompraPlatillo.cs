@@ -8,7 +8,7 @@ using databaseK.Entities;
 
 namespace databaseK.DB.Tables
 {
-    class CompraPlatillo : Basic<CompraPlatilloEntity>
+    public class CompraPlatillo : Basic<CompraPlatilloEntity>
     {
         public CompraPlatillo(MyContext context) : base(context) { }
     }

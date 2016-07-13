@@ -9,14 +9,16 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace databaseK.Entities
 {
     [Table("compra_platillo")]
-    class CompraPlatilloEntity
+    public class CompraPlatilloEntity
     {
         [Key]
         public long id { get; set; }
         public long platillo { get; set; }
         public long compra { get; set; }
 
-        public PlatillosEntity platillo_E { get; set; }
-        public ComprasEntity compra_E { get; set; }
+        [ForeignKey("platillo")]
+        public virtual PlatillosEntity platillo_E { get; set; }
+        [ForeignKey("compra")]
+        public virtual ComprasEntity compra_E { get; set; }
     }
 }

@@ -9,7 +9,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace databaseK.Entities
 {
     [Table("clientes")]
-    class ClientesEntity
+    public class ClientesEntity
     {
         [Key]
         public long id { get; set; }
@@ -18,6 +18,6 @@ namespace databaseK.Entities
         public string correo { get; set; }
         public string direccion { get; set; }
 
-        public ICollection<ComprasEntity> compras { get; set; }
+        public virtual ICollection<ComprasEntity> compras { get; set; }
     }
 }

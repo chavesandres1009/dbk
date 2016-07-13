@@ -8,7 +8,7 @@ using databaseK.DB.Tables;
 
 namespace databaseK.DB
 {
-    class DB : IDisposable
+    public class DB : IDisposable
     {
         private MyContext context;
 
