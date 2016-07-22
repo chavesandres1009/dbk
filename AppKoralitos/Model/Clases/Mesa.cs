@@ -13,11 +13,13 @@ namespace AppKoralitos.Model.Clases
 
         public int num_mesa { get; set; }
         public int estado { get; set; }
+        public List<Platillo> orden { get; set; }
 
         public Mesa(int num_mesa)
         {
             this.num_mesa = num_mesa;
             this.estado = LIBRE;
+            this.orden = new List<Platillo>();
         }
     }
 }

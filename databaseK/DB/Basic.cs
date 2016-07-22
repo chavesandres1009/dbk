@@ -34,7 +34,7 @@ namespace databaseK.DB
             return context.Find(id);
         }
 
-        public List<TEntity> get_all()
+        public IEnumerable<TEntity> get_all()
         {
             return context.ToList();
         }

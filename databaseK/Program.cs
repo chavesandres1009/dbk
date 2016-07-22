@@ -17,7 +17,7 @@ namespace databaseK
             /*
             using(var db = new MyContext())
             {
-                var platillos = db.platillos.Where((e) => e.familia == 4);
+                var platillos = db.platillos.ToList();
                 foreach(var p in platillos.ToList())
                 {
                     Console.WriteLine(p.nombre);
@@ -30,12 +30,11 @@ namespace databaseK
             
             using (var db = new databaseK.DB.DB(new MyContext()))
             {
-                Console.WriteLine("Search cliente");
-                Console.WriteLine("nombre: " + db.clientes.get(1).nombre);
-                Console.WriteLine("Search empleado");
-                Console.WriteLine("nombre: " + db.empleados.get(2).nombre);
-                Console.WriteLine("Search familia");
-                Console.WriteLine("nombre: " + db.familias_p.get(4).nombre);
+
+                /*foreach(var e in db.empleados.get_all())
+                {
+                    Console.WriteLine("Id: " + e.id + " nombre: " + e.nombre);
+                }
                 //Console.WriteLine("Remove familia");
                 //Console.WriteLine("nombre: " + db.familias_p.remove(db.familias_p.get(12)));
                 //db.save_changes();}
@@ -44,11 +43,23 @@ namespace databaseK
                 {
                     Console.WriteLine("Id: " + p.id + " " + p.nombre);
                 }*/
-                        
+                /*
+                var e = db.empleados.get(1);
+                Console.WriteLine("Id:" + e.id + " nombre: " + e.nombre);
+                */
+
+                string s = "btn_platillo_208";
+                Console.WriteLine("Text: " + s);
+//                Console.WriteLine("Sub: " + s.Substring(12));
+                Console.WriteLine("Sub: " + s.Substring(13));
+                
+
                 Console.WriteLine("Press any key to exit...");
                 Console.ReadKey();
+                
             }
             
         }
     }
 }
+

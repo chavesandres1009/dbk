@@ -13,17 +13,18 @@ using AppKoralitos.Model.Clases;
 
 namespace AppKoralitos
 {
-    public partial class FacturaPLlevar : Form
+    public partial class Factura_Mesa : Form
     {
         private long visible_family = -1;
         private List<Platillo> orden;
 
-        public FacturaPLlevar()
+        public Factura_Mesa()
         {
             this.mcontrol = new MainController();
             this.orden = new List<Platillo>();
             InitializeComponent();
             this.init_food();
+            this.init_mesas();
             this.init_combo();
         }
 
@@ -60,6 +61,11 @@ namespace AppKoralitos
                 long id = long.Parse(btn.Name.Substring(13));
                 add_food_row(id);
             }
+        }
+
+        private void btn_mesas_click(object sender, EventArgs e)
+        {
+
         }
 
         private void add_food_row(long id)
@@ -139,6 +145,31 @@ namespace AppKoralitos
                 dataGridView1.Rows.Remove(row);
                 update_total();
             }
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

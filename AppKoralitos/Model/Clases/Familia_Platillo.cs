@@ -18,5 +18,17 @@ namespace AppKoralitos.Model.Clases
             this.nombre = nombre;
             platillos = new List<Platillo>();
         }
+
+        public Platillo get_platillo(long id)
+        {
+            foreach(var p in platillos)
+            {
+                if(p.id == id)
+                {
+                    return p;
+                }
+            }
+            return null;
+        }
     }
 }

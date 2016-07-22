@@ -4,16 +4,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using AppKoralitos.Model.Clases;
 
 namespace AppKoralitos.View
 {
     class FoodButton : Button
     {
-        TableLayoutPanel table { get; set; }
-        
-        public FoodButton(TableLayoutPanel table)
+        Platillo platillo { get; }
+
+        public FoodButton(Platillo platillo) : base()
         {
-            this.table = table;
+            this.platillo = platillo;
+            this.Name = "btn_" + platillo.nombre;
+            this.Text = platillo.nombre;
         }
 
         public void action()
