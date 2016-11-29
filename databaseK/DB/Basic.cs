@@ -54,9 +54,24 @@ namespace databaseK.DB
             return context.Count();
         }
 
+        public TEntity first(Expression<Func<TEntity, bool>> predicate)
+        {
+            return context.First(predicate);
+        }
+
         public IEnumerable<TEntity> where(Expression<Func<TEntity, bool>> predicate)
         {
             return context.Where(predicate);
+        }
+
+        public TEntity last()
+        {
+            return context.Last();
+        }
+
+        public TEntity lastOrDefault()
+        {
+            return context.LastOrDefault();
         }
     }
 }

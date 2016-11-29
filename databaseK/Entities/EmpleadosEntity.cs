@@ -14,6 +14,8 @@ namespace databaseK.Entities
         [Key]
         public long id { get; set; }
         public string nombre { get; set; }
+        public bool is_administrador { get; set; }
+        public string password { get; set; }
         public string correo { get; set; }
         public string telefono { get; set; }
 

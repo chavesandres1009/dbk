@@ -15,6 +15,8 @@ namespace databaseK.Context
 
         }
 
+        public MyContext(string connString) : base(connString) { }
+
         public virtual DbSet<ClientesEntity> clientes { get; set; }
         public virtual DbSet<EmpleadosEntity> empleados { get; set; }
         public virtual DbSet<FamiliasPEntity> familias_p { get; set; }
@@ -24,6 +26,7 @@ namespace databaseK.Context
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
+            
         }
     }
 }

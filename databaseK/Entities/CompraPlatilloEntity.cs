@@ -20,5 +20,6 @@ namespace databaseK.Entities
         public virtual PlatillosEntity platillo_E { get; set; }
         [ForeignKey("compra")]
         public virtual ComprasEntity compra_E { get; set; }
+
     }
 }

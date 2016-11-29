@@ -10,25 +10,18 @@ namespace AppKoralitos.Model.Clases
     {
         public long id { get; set; }
         public string nombre { get; set; }
-        public List<Platillo> platillos { get; set; }
+        public Dictionary<long, Platillo> platillos { get; set; }
 
         public Familia_Platillo(long id, string nombre)
         {
             this.id = id;
             this.nombre = nombre;
-            platillos = new List<Platillo>();
+            platillos = new Dictionary<long, Platillo>();
         }
 
         public Platillo get_platillo(long id)
         {
-            foreach(var p in platillos)
-            {
-                if(p.id == id)
-                {
-                    return p;
-                }
-            }
-            return null;
+            return platillos.ContainsKey(id) ? platillos[id] : null;
         }
     }
 }

@@ -12,6 +12,9 @@ namespace databaseK.DB.Tables
     {
         public Clientes(MyContext context) : base(context) { }
         
-         
+         public ClientesEntity find_telephone(string tel)
+        {
+            return first(e => e.telefono1 == tel || e.telefono2 == tel);
+        }
     }
 }
